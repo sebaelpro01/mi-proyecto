@@ -3,47 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    
+    <title>Navbar Personalizado</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados para el navbar */
+        .navbar-custom {
+            background-color: #000000; /* Color de fondo */
+            font-size: 18px; /* Tamaño de fuente */
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #ffffff; /* Color del texto del navbar-brand */
+        }
+
+        .navbar-custom .nav-link {
+            color: #ffffff; /* Color del texto de los enlaces */
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #df1212; /* Color del texto de los enlaces al pasar el ratón */
+        }
+
+        .navbar-custom .dropdown-menu {
+            background-color: #343a40; /* Color de fondo del dropdown */
+        }
+
+        .navbar-custom .dropdown-item {
+            color: #ffffff; /* Color del texto del dropdown-item */
+        }
+
+        .navbar-custom .dropdown-item:hover {
+            background-color: #df1212; /* Color de fondo del dropdown-item al pasar el ratón */
+        }
+
+        .navbar-custom .form-control {
+            background-color: #ffffff; /* Color de fondo del input de búsqueda */
+            color: #343a40; /* Color del texto del input de búsqueda */
+        }
+
+        .navbar-custom .btn-outline-success {
+            color: #ffffff; /* Color del texto del botón de búsqueda */
+            border-color: #ffffff; /* Color del borde del botón de búsqueda */
+        }
+
+        .navbar-custom .btn-outline-success:hover {
+            color: #343a40; /* Color del texto del botón de búsqueda al pasar el ratón */
+            background-color: #ffffff; /* Color de fondo del botón de búsqueda al pasar el ratón */
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">El Joker</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Desplegable
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Accion</a></li>
-                  <li><a class="dropdown-item" href="#">Otra accion</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Algo mas aqui</a></li>
+            <a class="navbar-brand" href="#">El Joker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Desplegable
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Accion</a></li>
+                            <li><a class="dropdown-item" href="#">Otra accion</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Algo mas aqui</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Desabilitado</a>
+                    </li> 
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Desabilitado</a>
-              </li> 
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
-      </nav>
+    </nav>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
 
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -106,8 +158,20 @@
           </div>
         </div>
       </div>
-      
 
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center my-4">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
 
 
       <script src="./js/bootstrap.bundle.min.js"></script>
